@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../build/tailwind.css">
+    <title>work2</title>
+</head>
+
+<body class="bg-room text-white h-screen ">
+    <div class="mx-5 ">
+        <!-- navbar -->
+        <div class="sidebar hidden ">
+            <nav class=" absolute z-10 text-black bg-white  w-52 h-screen  right-0 top-14 ">
+                <!-- <div class="mt-4 float-right pr-2">
+                    <button>
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div> -->
+                <div class=" grid col-1 space-y-10 text-2xl mx-16 my-10  mr-32">
+                    <a href="#">View</a>
+                    <a href="#">expedita</a>
+                    <a href="#">Events</a>
+                    <a href="#">Learn</a>
+                    <a href="#">Shop</a>
+
+                </div>
+
+            </nav>
+        </div>
+        <!-- top -->
+        <div class="my-6 flex justify-between  ">
+            <p class="text-xl font-bold md:ml-20">SCUL.PT</p>
+            <div class="mr-2">
+                <button class=" relative z-10 md:hidden" id="navv">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:block space-x-8 mr-32 ">
+                <a href="#">View</a>
+                <a href="#">expedita</a>
+                <a href="#">Events</a>
+                <a href="#">Learn</a>
+                <a href="#">Shop</a>
+
+            </div>
+
+        </div>
+        <!-- mid phone -->
+        <div class="space-y-10 lg:mx-64 lg:my-20 ">
+
+            <div class=" ">
+                <!-- slide1 -->
+                <div class="mySlides">
+                    <div class="  lg:flex  ">
+                        <div
+                            class="  bg-sign  h-52 lg:my-12  lg:w-96 lg:h-60    transform lg:hover:scale-110   transition lg:relative lg:left-96   ">
+                        </div>
+                        <div class="my-4 lg:relative lg:right-96">
+                            <p class="md:my-3 text-xs  ">September 26 ,2016 - Bus excursion</p>
+                            <p class="text-3xl  md:text-4xl lg:text-7xl ">Exploring Old <br> Architecture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide2 -->
+                <div class="mySlides">
+                    <div class="lg:flex ">
+                        <div
+                            class="bg-sign2  h-52 lg:my-12  lg:w-96 lg:h-60    transform lg:hover:scale-110   transition lg:relative lg:left-96   ">
+                        </div>
+                        <div class="my-4 lg:relative lg:right-96">
+                            <p class="md:my-3 text-xs ">August 20 ,2020 - August 23 ,2021</p>
+                            <p class="text-3xl  md:text-4xl lg:text-7xl">Great Sculpture : <br>Ancient to Comptempary
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class=" text-white py-3 px-3 mt-5  border-2 border-x-orange-500">Read more</button>
+
+            <div class="flex my-16 space-x-10 justify-center text-xl">
+                <button onclick="plusSlides(-1)">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path>
+                    </svg>
+
+                </button>
+                <p id="pageCount">1/4</p>
+                <button class="" onclick="plusSlides(1)">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 5l7 7-7 7M5 5l7 7-7 7"></path>
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+
+
+        <!-- mid laptop -->
+
+
+    </div>
+
+</body>
+
+</html>
+<style scoped>
+    .bg-room {
+        background-image: url(../img/greek.jpg);
+    }
+
+    .bg-sign {
+        background-image: url(../img/istockphoto-610251218-612x612.jpg);
+        background-size: cover;
+    }
+
+    .bg-sign2 {
+        background-image: url(../img/greek2.jpg);
+        background-size: cover;
+    }
+
+    .active {
+        display: block;
+    }
+</style>
+<script>
+    // function navbaropen(){
+    //     document.getElementById("navv").style.display ="block";
+    // }
+    // function navbaroclose(){
+    //     document.getElementById("navv").style.display = "none";
+    // }
+    let btn = document.querySelector("#navv");
+    let sidebar = document.querySelector(".sidebar");
+
+    btn.onclick = function () {
+        sidebar.classList.toggle("active");
+    }
+
+    // slider
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    // page counter
+    document.getElementById("pageCount").innerHTML = "it worked";
+    document.getElementById("pageCount").innerHTML = "hello world";
+
+
+</script>
